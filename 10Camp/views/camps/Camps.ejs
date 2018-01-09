@@ -1,0 +1,26 @@
+<% include ../partials/Header %>
+<div class="container">
+<div class="jumbotron">
+    <h1>Wellcome to Camps</h1>
+    <p>Lorem ipsum dolor sit amet, no sit ubique adversarium, exerci partem usu ex</p>
+    <a class="btn btn-primary" role="button" href="/camps/new">Add new</a>
+    <a class="btn btn-primary" role="button" href="/">Go back</a>
+</div>
+<div class="row text-center" style="display:flex; flex-wrap:wrap;">
+    <% camps.forEach(function(camps){ %>
+    <div class="col-md-3 col-sm-6">
+        <div class="img-thumbnail" style="margin-bottom: 5%">
+            <img src="<%=camps.image %>">
+            <div class="caption">
+                <h4><%=camps.name%></h4>
+                <a class="btn btn-primary" href="/camps/<%=camps.id%>">More</a>
+            </div>
+        </div>
+        
+    </div>
+    
+    <% }) %>
+</div>
+
+</div>
+<% include ../partials/Footer %>
